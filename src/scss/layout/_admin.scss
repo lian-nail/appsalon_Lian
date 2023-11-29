@@ -1,0 +1,41 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as mix;
+
+.citas {
+    list-style: none;
+    padding: 0;
+    li {
+        padding: 1rem;
+        border-top: 1px solid v.$blanco;
+        border-radius: 0.5rem;
+        transition-property: background-color;
+        transition-duration: 0.8s;
+
+        p{
+            font-weight: v.$bold;
+            color: v.$moradoClaro;
+        }
+
+        span, .servicio {
+            font-weight: v.$regular;
+            color: v.$blanco;
+            
+        }
+
+        &:hover {
+            background-color: v.$moradoOscuro;
+        }
+    }
+
+}
+.servicios {
+    @extend .citas;
+
+    .acciones {
+        margin: 0;
+    }
+    .boton,
+    .boton-eliminar2 {
+        margin: 0;
+    }
+}

@@ -1,0 +1,33 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as mix;
+
+.tabs {
+
+    @include mix.tablet {
+        // @include mix.grid(3,1);
+        display: flex;
+    }
+    button {
+        background-color: v.$moradoClaro;
+        border: none;
+        color: v.$gris;
+        padding: 1rem;
+        display: block;
+        width: 100%;
+        margin: 0 1rem;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        font-weight: v.$bold;
+        transition: background-color 500ms ease-out;
+
+        &:hover {
+            cursor: pointer;
+            background-color: darken(v.$moradoClaro, 15%)
+        }
+
+        &.actual {
+            background-color: v.$gris;
+            color: v.$moradoClaro;
+        }
+    }
+}

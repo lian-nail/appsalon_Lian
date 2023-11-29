@@ -1,0 +1,22 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as mix;
+
+.acciones {
+    margin-top: v.$separacion;
+    @include mix.tablet {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    a {
+        color: v.$gris;
+        display: block;
+        margin-bottom: calc(v.$separacion/2);
+        text-align: center;
+        &:hover {
+            color: darken( v.$gris, 20% );
+            cursor: pointer;
+        }
+    
+    }
+}

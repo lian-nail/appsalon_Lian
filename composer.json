@@ -1,0 +1,22 @@
+{
+    "name": "israel/app-salon_lian",
+    "description": "ProyectoPHP8, MVC, SQL, SASS, GULP",
+    "type": "proyect",
+    "autoload": {
+        "psr-4": {
+            "MVC\\": "./",
+            "Controllers\\": "./controllers",
+            "Model\\": "./models",
+            "Classes\\": "./classes"
+        }
+    },
+    "authors": [
+        {
+            "name": "Lian"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.8",
+        "vlucas/phpdotenv": "^5.6"
+    }
+}
